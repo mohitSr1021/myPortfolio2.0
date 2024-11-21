@@ -10,7 +10,7 @@ import exjs from "../assets/exjs.png";
 import MongoDB from "../assets/MongoDB.png";
 import SQL from "../assets/SQL.png";
 import firebase from "../assets/firebase.png";
-
+import P2 from "../assets/P2.png";
 
 export const Bio = {
   name: "Mohit Singh Rawat",
@@ -144,7 +144,7 @@ export const Projects: Project[] = [
     date: "Apr 2024 - May 2024",
     description:
       "A full-stack ecommerce website built using the MERN stack (MongoDB, Express.js, React.js, Node.js) along with Redux Toolkit for state management. The website provides a modern and responsive user interface for browsing products, managing a shopping cart, and completing secure transactions.",
-    image: "/public/P2.png",
+    image: P2,
     ProjectLevel: "Advance with MERN Stack",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux-toolkit"],
     category: "Web Application",
