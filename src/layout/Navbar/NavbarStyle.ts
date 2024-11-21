@@ -106,7 +106,7 @@ export const NavItems = styled.ul`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<{ active?: boolean }>`
   text-decoration: none;
   color: ${({ theme }) => theme.text_primary};
   padding: 10px 15px;
@@ -115,8 +115,10 @@ export const NavLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+
   ${({ active }) =>
-    active && `color: white !important; font-weight: bold;`}
+    active &&
+    `color: white !important; font-weight: bold;`}
 `;
 
 export const ButtonContainer = styled.div`

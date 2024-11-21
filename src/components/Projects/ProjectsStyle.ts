@@ -66,7 +66,11 @@ export const ToggleButtonGroup = styled.div`
   }
 `;
 
-export const ToggleButton = styled.div`
+interface ToggleButtonProps extends React.HTMLProps<HTMLDivElement> {
+  active: boolean;
+}
+
+export const ToggleButton = styled.div<ToggleButtonProps>`
   padding: 8px 18px;
   border-radius: 6px;
   cursor: pointer;

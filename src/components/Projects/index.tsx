@@ -48,6 +48,7 @@ const Projects: React.FC<ProjectsProps> = ({ openModal, setOpenModal }) => {
               >
                 {category === "all" ? "All" : category.toUpperCase()}
               </ToggleButton>
+
               {category !== "Mobile Application" && <Divider />}
             </React.Fragment>
           ))}

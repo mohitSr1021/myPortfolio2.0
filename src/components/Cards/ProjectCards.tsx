@@ -133,9 +133,9 @@ interface ModalState {
 
 interface ProjectCardsProps {
   project: Project;
+  openModal: ModalState;
   setOpenModal: React.Dispatch<React.SetStateAction<ModalState>>;
 }
-
 const ProjectCards: React.FC<ProjectCardsProps> = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project })}>

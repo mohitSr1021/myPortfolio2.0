@@ -100,7 +100,11 @@ const ButtonGroup = styled.div`
   gap: 12px;
 `;
 
-const Button = styled.a`
+interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  dull?: boolean;
+}
+
+const Button = styled.a<ButtonProps>`
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -115,7 +119,7 @@ const Button = styled.a`
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
+            background-color: #854CE6;
         }
     `}
   cursor: pointer;
