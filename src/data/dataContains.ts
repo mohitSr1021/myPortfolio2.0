@@ -1,5 +1,15 @@
 import html from "../assets/html.png";
-import css from "../../public/css.png";
+import css from "../assets/css.png";
+import bootstrap from "../assets/bootstrap.png";
+import tailwindCss from "../assets/tailwindCss.png";
+import js from "../assets/js.png";
+import react from "../assets/react.png";
+import redux from "../assets/redux.png";
+import nodejs from "../assets/nodejs.png";
+import exjs from "../assets/exjs.png";
+import MongoDB from "../assets/MongoDB.png";
+import SQL from "../assets/SQL.png";
+import firebase from "../assets/firebase.png";
 
 
 export const Bio = {
@@ -27,23 +37,23 @@ export const Skills = [
       },
       {
         name: "BOOTSTRAP",
-        image: "/public/bootstrap.png",
+        image:bootstrap,
       },
       {
         name: "TAILWIND CSS",
-        image: "/public/tailwindCss.png",
+        image: tailwindCss,
       },
       {
         name: "JS",
-        image: "/public/js.png",
+        image:js,
       },
       {
         name: "React JS",
-        image: "/public/react.png",
+        image: react,
       },
       {
         name: "Redux",
-        image: "/public/redux.png",
+        image: redux,
       },
     ],
   },
@@ -52,24 +62,24 @@ export const Skills = [
     skills: [
       {
         name: "Node.js",
-        image: "/public/nodejs.png",
+        image: nodejs,
       },
       {
         name: "Express.js",
-        image: "/public/exjs.png",
+        image: exjs,
       },
       {
         name: "MongoDB",
-        image: "/public/MongoDB.png",
+        image: MongoDB,
       },
       {
         name: "SQL",
-        image: "/public/SQL.png",
+        image: SQL,
       },
 
       {
         name: "Firebase",
-        image: "/public/firebase.png",
+        image: firebase,
       },
     ],
   },
