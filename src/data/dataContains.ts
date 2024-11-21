@@ -1,3 +1,7 @@
+import html from "../assets/html.png";
+import css from "../../public/css.png";
+
+
 export const Bio = {
   name: "Mohit Singh Rawat",
   roles: ["Programmer", "and", "Full Stack Developer"],
@@ -15,11 +19,11 @@ export const Skills = [
     skills: [
       {
         name: "HTML",
-        image: "../../public/html.png",
+        image: html,
       },
       {
         name: "CSS",
-        image: "/public/css.png",
+        image: css,
       },
       {
         name: "BOOTSTRAP",
