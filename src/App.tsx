@@ -1,6 +1,4 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -25,7 +23,7 @@ import CustomCursor from "./components/CustomCursor";
 import Loader from "./components/Loader";
 import WelcomePage from "./components/WelcomePage";
 import Certificate from "./components/Certificate/Index";
-import Achievement from "./components/Achievement/Index";
+// import Achievement from "./components/Achievement/Index";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -48,33 +46,27 @@ interface ModalState {
 }
 
 function AppContent() {
-  const [openModal, setOpenModal] = useState<ModalState>({
-    state: false,
-    project: null,
-  });
+  const [openModal, setOpenModal] = useState<ModalState>({ state: false, project: null });
   const [loading, setLoading] = useState(true);
-  const [showWelcome, setShowWelcome] = useState(true);
   const [hasCompletedWelcome, setHasCompletedWelcome] = useState(false);
   const location = useLocation();
 
+  // Timer to simulate loading state
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Manage redirect logic based on welcome completion
   useEffect(() => {
     if (location.pathname === "/home" && !hasCompletedWelcome) {
       window.history.replaceState(null, "", "/welcome");
     }
   }, [location, hasCompletedWelcome]);
 
-  const handleWelcomeComplete = () => {
-    setShowWelcome(false);
+  const handleWelcomeComplete = useCallback(() => {
     setHasCompletedWelcome(true);
-  };
+  }, []);
 
   if (loading) {
     return <Loader />;
@@ -85,7 +77,7 @@ function AppContent() {
       <Route
         path="/welcome"
         element={
-          showWelcome ? (
+          !hasCompletedWelcome ? (
             <WelcomePage onComplete={handleWelcomeComplete} />
           ) : (
             <Navigate to="/home" replace />
@@ -107,10 +99,7 @@ function AppContent() {
                 <Education />
                 <Footer />
                 {openModal.state && (
-                  <ProjectDetails
-                    openModal={openModal}
-                    setOpenModal={setOpenModal}
-                  />
+                  <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
                 )}
               </Body>
             </>
