@@ -10,6 +10,7 @@ import exjs from "../assets/exjs.png";
 import MongoDB from "../assets/MongoDB.png";
 import SQL from "../assets/SQL.png";
 import firebase from "../assets/firebase.png";
+import P1 from "../assets/P1.png";
 import P2 from "../assets/P2.png";
 
 export const Bio = {
@@ -131,7 +132,7 @@ export const Projects: Project[] = [
     date: "Jan 2024",
     description:
       "“Todo List” Project is a simple and efficient task management application that allows users to create, edit, and organize their daily tasks. With an intuitive interface, users can mark tasks as completed, ensuring a streamlined and effective approach to managing their to-do lists. The project aims to increase productivity by providing a user-friendly platform to organize and track tasks as well as add personalized learning.",
-    image: "/public/P1.png",
+    image: P1,
     ProjectLevel: "Basic with Frontend and Javascript Logic",
     tags: ["React Js", "Javascript Fundamentals"],
     category: "Web Application",
