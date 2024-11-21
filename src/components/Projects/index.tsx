@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Container,
   Wrapper,
@@ -9,16 +10,7 @@ import {
   Divider,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
-import { Projects as projects } from "../../data/dataContains";
-import { useState } from "react";
-
-interface Project {
-  image?: string;
-  tags?: string[];
-  title: string;
-  date: string;
-  description?: string;
-}
+import { Project, Projects as projects } from "../../data/dataContains";
 
 interface ModalState {
   state: boolean;
@@ -33,62 +25,42 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState<string>("all");
 
+  const filteredProjects =
+    toggle === "all"
+      ? projects
+      : projects.filter((project) => project.category === toggle);
+
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
+          I have worked on a wide range of projects, from web apps to mobile
           apps. Here are some of my projects.
         </Desc>
         <ToggleButtonGroup>
-          {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "Web Application" ? (
-            <ToggleButton
-              active
-              value="Web Application"
-              onClick={() => setToggle("Web Application")}
-            >
-              WEB APP'S
-            </ToggleButton>
-          ) : (
-            <ToggleButton
-              value="Web Application"
-              onClick={() => setToggle("Web Application")}
-            >
-              WEB APP'S
-            </ToggleButton>
-          )}
+          {["all", "Web Application"].map((category) => (
+            <React.Fragment key={category}>
+              <ToggleButton
+                active={toggle === category}
+                value={category}
+                onClick={() => setToggle(category)}
+              >
+                {category === "all" ? "All" : category.toUpperCase()}
+              </ToggleButton>
+              {category !== "Mobile Application" && <Divider />}
+            </React.Fragment>
+          ))}
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              openModal={openModal}
+              setOpenModal={setOpenModal}
+            />
+          ))}
         </CardContainer>
       </Wrapper>
     </Container>

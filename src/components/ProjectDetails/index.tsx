@@ -1,6 +1,7 @@
 import { CloseRounded } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import styled from "styled-components";
+import { Project } from "../../data/dataContains";
 
 const Container = styled.div`
   width: 100%;
@@ -128,15 +129,6 @@ const Button = styled.a`
   }
 `;
 
-interface Project {
-  image?: string;
-  tags?: string[];
-  title: string;
-  date: string;
-  description?: string;
-  github?: string;
-  webapp?: string;
-}
 
 interface ModalState {
   state: boolean;

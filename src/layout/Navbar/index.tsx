@@ -27,7 +27,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = (link) => {
+  const handleLinkClick = (link:string) => {
     setActiveLink(link); // Update the active link state
     setIsOpen(false); // Close the mobile menu on link click
   };

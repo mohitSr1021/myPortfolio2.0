@@ -23,7 +23,7 @@ import CustomCursor from "./components/CustomCursor";
 import Loader from "./components/Loader";
 import WelcomePage from "./components/WelcomePage";
 import Certificate from "./components/Certificate/Index";
-// import Achievement from "./components/Achievement/Index";
+import { Project } from "./data/dataContains";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -31,14 +31,6 @@ const Body = styled.div`
   height: 100%;
   overflow-x: hidden;
 `;
-
-interface Project {
-  image?: string;
-  tags?: string[];
-  title: string;
-  date: string;
-  description?: string;
-}
 
 interface ModalState {
   state: boolean;
@@ -59,7 +51,7 @@ function AppContent() {
 
   // Manage redirect logic based on welcome completion
   useEffect(() => {
-    if (location.pathname === "/home" && !hasCompletedWelcome) {
+    if (!hasCompletedWelcome && location.pathname !== "/welcome") {
       window.history.replaceState(null, "", "/welcome");
     }
   }, [location, hasCompletedWelcome]);

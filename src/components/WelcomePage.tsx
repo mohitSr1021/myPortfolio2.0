@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import bg from "../assets/intro-bg.png";
 import { gsap } from "gsap";
-import clickme from "../assets/swipe.png";
+// import clickme from "../assets/swipe.png";
 
 const WelcomeWrapper = styled.div`
   display: flex;

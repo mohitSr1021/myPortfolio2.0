@@ -71,20 +71,46 @@ export const Skills = [
   },
 ];
 
-export const Experiences = [
+interface Experience {
+  id: number;
+  img: string;
+  role: string;
+  company: string;
+  date: string;
+  desc: string;
+  skills: string[];
+  doc: string;
+}
+
+export const Experiences: Experience[] = [
   {
     id: 0,
     img: "",
-    role: "frontend Developer Intern",
+    role: "Frontend Developer Intern",
     company: "Xyz",
     date: "June 2023 - present",
-    desc: "working on the frontend of the web application",
+    desc:"Developing and optimizing frontend features for a seamless and engaging user experience in web applications.",
     skills: ["React JS", "Redux", "HTML", "CSS"],
-    doc: "ww.google.com",
+    doc: "https://www.google.com",
   },
 ];
 
-export const Projects = [
+// types.ts (or a shared types file)
+export interface Project {
+  id: number;
+  image?: string;
+  ProjectLevel:string;
+  tags?: string[];
+  title: string;
+  date: string;
+  description?: string;
+  category: string;
+  github?: string;
+  webapp?: string;
+}
+
+
+export const Projects: Project[] = [
   {
     id: 0,
     title: "T0-[)0",

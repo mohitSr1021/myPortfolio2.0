@@ -1,5 +1,7 @@
+import React from "react";
 import { FaReact } from "react-icons/fa6";
 import styled from "styled-components";
+import { Project } from "../../data/dataContains";
 
 const Card = styled.div`
   width: 330px;
@@ -73,7 +75,7 @@ const Tag = styled.span`
   font-size: 12px;
   font-weight: 400;
   color: ${({ theme }) => theme.primary};
-  background-color: ${({ theme }) => theme.primary + 15};
+  background-color: ${({ theme }) => theme.primary + "15"};
   padding: 2px 8px;
   border-radius: 10px;
 `;
@@ -85,6 +87,7 @@ const Details = styled.div`
   gap: 0px;
   padding: 0px 2px;
 `;
+
 const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
@@ -104,7 +107,7 @@ const Date = styled.div`
   margin-left: 2px;
   font-weight: 400;
   padding: 0 4px;
-  color: ${({ theme }) => theme.text_secondary + 80};
+  color: ${({ theme }) => theme.text_secondary + "80"};
   @media only screen and (max-width: 768px) {
     font-size: 10px;
   }
@@ -112,7 +115,7 @@ const Date = styled.div`
 
 const Description = styled.div`
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary + "99"};
   overflow: hidden;
   margin-top: 8px;
   display: -webkit-box;
@@ -122,16 +125,6 @@ const Description = styled.div`
   text-overflow: ellipsis;
   padding: 0 4px;
 `;
-
-interface Project {
-  image?: string;
-  tags?: string[];
-  title?: string;
-  date?: string;
-  description?: string;
-  github?: string;
-  webapp?: string;
-}
 
 interface ModalState {
   state: boolean;
@@ -143,17 +136,14 @@ interface ProjectCardsProps {
   setOpenModal: React.Dispatch<React.SetStateAction<ModalState>>;
 }
 
-const ProjectCards: React.FC<ProjectCardsProps> = ({
-  project,
-  setOpenModal,
-}) => {
+const ProjectCards: React.FC<ProjectCardsProps> = ({ project, setOpenModal }) => {
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
+    <Card onClick={() => setOpenModal({ state: true, project })}>
       <div className="hover-overlay">
         <FaReact className="icon" style={{ color: "#5eead4" }} />
         <span>Project Overview</span>
       </div>
-      <Image src={project.image} />
+      <Image src={project.image} alt={`${project.title} Thumbnail`} />
       <Tags>
         {project.tags?.map((tag, index) => (
           <Tag key={index}>{tag}</Tag>

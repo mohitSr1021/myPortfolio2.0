@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import Android_Dev from "../../assets/Android_App_Development_Training_Certificate.jpg";
 import Artificial_intelligence from "../../assets/Artificial_intelligence.jpg";
@@ -82,7 +82,12 @@ const CardContainer = styled.div`
   }
 `;
 
-const Card = styled.div`
+
+interface CardProps {
+  flipped?: boolean;
+}
+
+const Card = styled.div<CardProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +99,7 @@ const Card = styled.div`
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  transform: ${(props) => (props.flipped ? "rotateY(180deg)" : "rotateY(0)")};
+  transform: ${(props) => (props?.flipped ? "rotateY(180deg)" : "rotateY(0)")};
   transition: transform 0.6s;
 
   @media (max-width: 640px) {
@@ -156,7 +161,7 @@ const Date = styled.div`
   }
 `;
 
-const CertificateCard = ({ title, imageUrl, date }) => {
+const CertificateCard = ({ title, imageUrl, date }:{title:string,imageUrl:string,date:string}) => {
   const [flipped, setFlipped] = useState(false);
 
   return (

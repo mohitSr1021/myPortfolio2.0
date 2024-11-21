@@ -147,7 +147,23 @@ const Grade = styled.div`
   }
 `;
 
-const EducationCard = ({ education }) => {
+
+interface Education {
+  img: string;
+  school: string;
+  degree?: string;
+  Stream?: string;
+  date: string;
+  grade?: string;
+  percentage?: string;
+  desc: string;
+}
+
+interface EducationCardProps {
+  education: Education;
+}
+
+const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
   return (
     <Card>
       <Top>

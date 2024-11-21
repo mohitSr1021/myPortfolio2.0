@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
@@ -82,11 +80,13 @@ const TimelineSection = styled.div`
 `;
 
 export default function AnimatedEducation() {
-  const timelineSectionRef = useRef(null);
+  const timelineSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const timelineSection = timelineSectionRef.current;
-    const cards = timelineSection?.querySelectorAll(".education-card");
+    if (!timelineSection) return;
+
+    const cards = timelineSection.querySelectorAll<HTMLDivElement>(".education-card");
 
     cards.forEach((card) => {
       gsap.fromTo(
@@ -107,6 +107,11 @@ export default function AnimatedEducation() {
         }
       );
     });
+
+    // Cleanup animations on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
