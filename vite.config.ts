@@ -6,7 +6,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig(() => {
   return {
-   
+   base:"./",// Ensures relative paths for assets
     plugins: [
       react(),
       viteStaticCopy({
@@ -22,7 +22,11 @@ export default defineConfig(() => {
       alias: {
         "@": path.resolve(__dirname, "./src/"),
       },
-      assetsInclude: ['**/*.JPG'],
+      assetsInclude: ["**/*.JPG", "**/*.png", "**/*.svg", "**/*.jpg"],
+    },
+    build: {
+      outDir: "dist", // Ensure Vite's output directory matches your Vercel setup
+      assetsDir: "assets", // Output directory for assets
     },
   };
 });
