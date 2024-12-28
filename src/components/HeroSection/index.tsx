@@ -21,7 +21,7 @@ import { Title } from "./HeroSectionStyle";
 const Index = () => {
   return (
     <>
-      <HeroContainer id="about">
+      <HeroContainer id="About">
         <HeroBG>
           <HeroBgAnimation />
         </HeroBG>

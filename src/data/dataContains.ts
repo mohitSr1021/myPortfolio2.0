@@ -86,6 +86,10 @@ export const Skills = [
   },
 ];
 
+export interface SubProject {
+  name: string;
+  url?: string;
+}
 interface Experience {
   id: number;
   img: string;
@@ -93,7 +97,9 @@ interface Experience {
   company: string;
   date: string;
   desc: string;
-  skills: string[];
+  skills?: string[];
+  highlights?: string[];
+  projects:SubProject [];
   doc: string;
 }
 
@@ -101,11 +107,26 @@ export const Experiences: Experience[] = [
   {
     id: 0,
     img: "",
-    role: "Frontend Developer Intern",
-    company: "Xyz",
-    date: "June 2023 - present",
-    desc:"Developing and optimizing frontend features for a seamless and engaging user experience in web applications.",
-    skills: ["React JS", "Redux", "HTML", "CSS"],
+    role: "Software Development Intern",
+    company: "Zyper.ai Pvt Ltd.",
+    date: "August 2024 - December 2024",
+    desc: "Developed and maintained responsive web applications, focusing on optimizing frontend features for an engaging user experience.",
+    skills: ["React.js", "Angular.js", "Redux", "HTML", "CSS"],
+    projects: [
+      {
+        name: "Web Application",
+        url: "https://zyper-ai.vercel.app",
+      },
+      {
+        name: "Corporate Website",
+        url: "https://zyper.ai",
+      },
+    ],
+    highlights: [
+      "Collaborated with cross-functional teams to launch innovative product features.",
+      "Integrated APIs to fetch and display real-time data, enhancing application functionality.",
+      "Integrated APIs to fetch and display real-time data, enhancing application functionality."
+    ],
     doc: "https://www.google.com",
   },
 ];
@@ -122,12 +143,23 @@ export interface Project {
   category: string;
   github?: string;
   webapp?: string;
+  completed:boolean
 }
 
 
 export const Projects: Project[] = [
   {
     id: 0,
+    title: "Social Media Application",
+    date: "Dec 2024 - Present",
+    ProjectLevel: "Advance with MERN Stack",
+    category: "Web Application",
+    description: "Social Media Application - Coming Soon ",
+    completed:false,
+    image:"https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg?semt=ais_hybrid"
+  },
+  {
+    id: 1,
     title: "T0-[)0",
     date: "Jan 2024",
     description:
@@ -138,9 +170,10 @@ export const Projects: Project[] = [
     category: "Web Application",
     github: "https://github.com/mohitSr1021/todo_list_react_Application",
     webapp: "https://todo-list-react-application.vercel.app/",
+    completed:true,
   },
   {
-    id: 1,
+    id: 2,
     title: "ecommerce.",
     date: "Apr 2024 - May 2024",
     description:
@@ -152,6 +185,7 @@ export const Projects: Project[] = [
     github:
       "https://github.com/mohitSr1021/E-Commerce-Website-MERN-Stack-Application-",
     webapp: "https://mern-stack-application-seven.vercel.app/",
+    completed:true,
   },
 ];
 

@@ -34,7 +34,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1280) {
         setIsOpen(false);
       }
     };
@@ -63,11 +63,12 @@ const Navbar = () => {
         </NavLogo>
         <NavItems>
           {[
-            "#about",
-            "#skills",
-            "#projects",
-            "#certifications",
-            "#education",
+            "#About",
+            "#Experience",
+            "#Skills",
+            "#Projects",
+            "#Certifications",
+            "#Education",
           ].map((link) => (
             <NavLink
               key={link}
@@ -108,7 +109,7 @@ const Navbar = () => {
         </MobileIcon>
       </NavbarContainer>
       <MobileMenu isOpen={isOpen}>
-        {["#about", "#skills", "#projects", "#education"].map((link) => (
+        {["#About","#Experience", "#Skills", "#Projects", "#Education"].map((link) => (
           <MobileLink
             key={link}
             href={link}

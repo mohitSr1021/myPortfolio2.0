@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const blinkAnimation = keyframes`
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+`;
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -95,4 +101,11 @@ export const CardContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 28px;
+`;
+
+export const ComingSoonWrapper = styled.div`
+  display: inline-block;
+  animation: ${blinkAnimation} 2s ease-in-out infinite;
+  color: ${({ theme }) => theme.primary};
+  font-weight: 600;
 `;

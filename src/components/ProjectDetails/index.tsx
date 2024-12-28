@@ -171,14 +171,19 @@ const Index: React.FC<IndexProps> = ({ openModal, setOpenModal }) => {
             ))}
           </Tags>
           <Desc>{openModal?.project?.description}</Desc>
-          <ButtonGroup>
-            <Button href={openModal?.project?.github} target="new">
-              View Code
-            </Button>
-            <Button href={openModal?.project?.webapp} target="new">
-              View Live App
-            </Button>
-          </ButtonGroup>
+          {
+            openModal?.project?.completed ? (
+              <ButtonGroup>
+              <Button href={openModal?.project?.github} target="new">
+                View Code
+              </Button>
+              <Button href={openModal?.project?.webapp} target="new">
+                View Live App
+              </Button>
+            </ButtonGroup>
+            ) :null
+          }
+        
         </Wrapper>
       </Container>
     </Modal>

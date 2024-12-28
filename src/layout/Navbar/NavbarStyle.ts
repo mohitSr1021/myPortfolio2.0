@@ -92,16 +92,16 @@ export const NavItems = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   padding: 0 6px;
   list-style: none;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1280px) {
     font-size: 14px;
     gap: 30px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     display: none;
   }
 `;
@@ -129,7 +129,7 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   gap: 8px;
   padding: 0 6px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     display: none;
   }
 `;
@@ -285,7 +285,7 @@ export const InstagramButton = styled.a`
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     display: block;
     position: absolute;
     top: 0;

@@ -179,7 +179,7 @@ const CertificateCard = ({ title, imageUrl, date }:{title:string,imageUrl:string
 
 const Certificate = () => {
   return (
-    <Container id="certifications">
+    <Container id="Certifications">
       <Title>Certificates</Title>
       <Wrapper>
         <CertificateCard

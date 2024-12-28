@@ -115,7 +115,7 @@ export default function AnimatedEducation() {
   }, []);
 
   return (
-    <Container id="education">
+    <Container id="Education">
       <Wrapper>
         <Title>Education</Title>
         <Desc>

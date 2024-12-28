@@ -31,7 +31,7 @@ const Projects: React.FC<ProjectsProps> = ({ openModal, setOpenModal }) => {
       : projects.filter((project) => project.category === toggle);
 
   return (
-    <Container id="projects">
+    <Container id="Projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc>

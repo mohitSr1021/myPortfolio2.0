@@ -14,7 +14,7 @@ import {
 
 const Index = () => {
   return (
-    <Container id="skills">
+    <Container id="Skills">
       <Wrapper>
         <Title>Skills</Title>
         <Description>

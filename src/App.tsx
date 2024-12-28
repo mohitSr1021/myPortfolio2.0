@@ -24,6 +24,7 @@ import Loader from "./components/Loader";
 import WelcomePage from "./components/WelcomePage";
 import Certificate from "./components/Certificate/Index";
 import { Project } from "./data/dataContains";
+import Experience from "./components/Experience";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -85,6 +86,7 @@ function AppContent() {
               <Body>
                 <CustomCursor />
                 <Hero />
+                <Experience />
                 <Skills />
                 <Projects openModal={openModal} setOpenModal={setOpenModal} />
                 <Certificate />

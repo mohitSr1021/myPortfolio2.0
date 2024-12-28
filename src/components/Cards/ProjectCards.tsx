@@ -2,8 +2,9 @@ import React from "react";
 import { FaReact } from "react-icons/fa6";
 import styled from "styled-components";
 import { Project } from "../../data/dataContains";
+import { ComingSoonWrapper } from "../Projects/ProjectsStyle";
 
-const Card = styled.div`
+export const Card = styled.div`
   width: 330px;
   min-height: 450px;
   margin-top: 20px;
@@ -25,6 +26,13 @@ const Card = styled.div`
 
     .hover-overlay {
       opacity: 1;
+    }
+
+    ${ComingSoonWrapper} {
+      animation-play-state: paused;
+      opacity: 0.5;
+      filter: blur(2px);
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -141,7 +149,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({ project, setOpenModal }) =>
     <Card onClick={() => setOpenModal({ state: true, project })}>
       <div className="hover-overlay">
         <FaReact className="icon" style={{ color: "#5eead4" }} />
-        <span>Project Overview</span>
+        <span>{project.completed ? "Project Overview" :"Coming Soon"}</span>
       </div>
       <Image src={project.image} alt={`${project.title} Thumbnail`} />
       <Tags>
@@ -152,7 +160,14 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({ project, setOpenModal }) =>
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
-        <Description>{project.description}</Description>
+        {project.completed ? (
+          <Description>{project.description}</Description>
+        ) : (
+       <>
+          <Description>{project?.description?.split(" - ")[0]}</Description>
+       <ComingSoonWrapper>{project.description?.split(" - ")[1]}</ComingSoonWrapper>
+       </>
+        )}
       </Details>
     </Card>
   );
