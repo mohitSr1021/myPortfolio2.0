@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { Experiences } from "../../data/dataContains";
 import {
   Typography,
-  Button,
   Chip,
   Collapse,
   IconButton,
@@ -232,7 +231,7 @@ interface ExperienceCardProps {
 const ExperienceCardComponent: React.FC<ExperienceCardProps> = ({
   experience,
 }) => {
-  const { role, company, date, desc, highlights, projects, doc, skills } =
+  const { role, company, date, desc, highlights, projects, skills } =
     experience;
   const [expanded, setExpanded] = useState(false);
 
