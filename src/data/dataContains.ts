@@ -12,6 +12,7 @@ import SQL from "../assets/SQL.png";
 import firebase from "../assets/firebase.png";
 import P1 from "../assets/P1.png";
 import P2 from "../assets/P2.png";
+import Insight2 from "../assets/Insight2.png";
 
 export const Bio = {
   name: "Mohit Singh Rawat",
@@ -38,7 +39,7 @@ export const Skills = [
       },
       {
         name: "BOOTSTRAP",
-        image:bootstrap,
+        image: bootstrap,
       },
       {
         name: "TAILWIND CSS",
@@ -46,7 +47,7 @@ export const Skills = [
       },
       {
         name: "JS",
-        image:js,
+        image: js,
       },
       {
         name: "React JS",
@@ -99,7 +100,7 @@ interface Experience {
   desc: string;
   skills?: string[];
   highlights?: string[];
-  projects:SubProject [];
+  projects: SubProject[];
   doc: string;
 }
 
@@ -125,7 +126,7 @@ export const Experiences: Experience[] = [
     highlights: [
       "Collaborated with cross-functional teams to launch innovative product features.",
       "Integrated APIs to fetch and display real-time data, enhancing application functionality.",
-      "Integrated APIs to fetch and display real-time data, enhancing application functionality."
+      "Integrated APIs to fetch and display real-time data, enhancing application functionality.",
     ],
     doc: "https://www.google.com",
   },
@@ -135,7 +136,7 @@ export const Experiences: Experience[] = [
 export interface Project {
   id: number;
   image?: string;
-  ProjectLevel:string;
+  ProjectLevel: string;
   tags?: string[];
   title: string;
   date: string;
@@ -143,9 +144,8 @@ export interface Project {
   category: string;
   github?: string;
   webapp?: string;
-  completed:boolean
+  completed: boolean;
 }
-
 
 export const Projects: Project[] = [
   {
@@ -155,22 +155,31 @@ export const Projects: Project[] = [
     ProjectLevel: "Advance with MERN Stack",
     category: "Web Application",
     description: "Social Media Application - Coming Soon ",
-    completed:false,
-    image:"https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg?semt=ais_hybrid"
+    completed: false,
+    image:
+      "https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg?semt=ais_hybrid",
   },
   {
     id: 1,
-    title: "T0-[)0",
+    title: "Insight.ai",
     date: "Jan 2024",
-    description:
-      "“Todo List” Project is a simple and efficient task management application that allows users to create, edit, and organize their daily tasks. With an intuitive interface, users can mark tasks as completed, ensuring a streamlined and effective approach to managing their to-do lists. The project aims to increase productivity by providing a user-friendly platform to organize and track tasks as well as add personalized learning.",
-    image: P1,
-    ProjectLevel: "Basic with Frontend and Javascript Logic",
-    tags: ["React Js", "Javascript Fundamentals"],
+    ProjectLevel: "Advance with MERN Stack",
+    tags: [
+      "React Js",
+      "MongoDb",
+      "Node Js",
+      "Express Js",
+      "Redux-toolkit",
+      "gemini-1.5-flash",
+      "JWT-Authentication",
+    ],
     category: "Web Application",
-    github: "https://github.com/mohitSr1021/todo_list_react_Application",
-    webapp: "https://todo-list-react-application.vercel.app/",
-    completed:true,
+    description:
+      "Insight.ai - An AI-powered smart notes application designed to enhance your note-taking experience. By leveraging AI, Insight assists in capturing, organizing, and retrieving information efficiently. Its intuitive interface and advanced features aim to streamline the process of managing notes, making it an ideal tool for students",
+    github: "https://github.com/mohitSr1021/Insight.ai",
+    webapp: "https://insightai-dev.vercel.app/home",
+    completed: true,
+    image: Insight2,
   },
   {
     id: 2,
@@ -185,7 +194,21 @@ export const Projects: Project[] = [
     github:
       "https://github.com/mohitSr1021/E-Commerce-Website-MERN-Stack-Application-",
     webapp: "https://mern-stack-application-seven.vercel.app/",
-    completed:true,
+    completed: true,
+  },
+  {
+    id: 3,
+    title: "T0-[)0",
+    date: "Jan 2024",
+    description:
+      "“Todo List” Project is a simple and efficient task management application that allows users to create, edit, and organize their daily tasks. With an intuitive interface, users can mark tasks as completed, ensuring a streamlined and effective approach to managing their to-do lists. The project aims to increase productivity by providing a user-friendly platform to organize and track tasks as well as add personalized learning.",
+    image: P1,
+    ProjectLevel: "Basic with Frontend and Javascript Logic",
+    tags: ["React Js", "Javascript Fundamentals"],
+    category: "Web Application",
+    github: "https://github.com/mohitSr1021/todo_list_react_Application",
+    webapp: "https://todo-list-react-application.vercel.app/",
+    completed: true,
   },
 ];
 
