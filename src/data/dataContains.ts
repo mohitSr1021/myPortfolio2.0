@@ -162,7 +162,7 @@ export const Projects: Project[] = [
   {
     id: 1,
     title: "Insight.ai",
-    date: "Jan 2024",
+    date: "Jan 2025",
     ProjectLevel: "Advance with MERN Stack",
     tags: [
       "React Js",
