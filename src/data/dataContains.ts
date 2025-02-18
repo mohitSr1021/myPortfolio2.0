@@ -18,7 +18,7 @@ export const Bio = {
   name: "Mohit Singh Rawat",
   roles: ["Programmer", "and", "Full Stack Developer"],
   description:
-    "I’m a dedicated tech and cybersecurity enthusiast with a passion for solving complex challenges and continuously expanding my skill set. Driven by curiosity and a commitment to innovation, I thrive in dynamic environments.",
+    "I'm a passionate MERN stack developer and tech enthusiast with a strong foundation in frontend and backend development. With a growing interest in cybersecurity, I enjoy building innovative, user-friendly applications while continuously expanding my skills. I'm driven by a commitment to lifelong learning and thrive in dynamic environments where I can contribute, collaborate, and grow.",
   resume:
     "https://docs.google.com/document/d/17S15DUnOXcvhbPaXBKZ2RbjSSBkPGy9UA81kk6g_XbQ/edit?usp=sharing",
   linkedin: "https://www.linkedin.com/in/mohit-singh-rawat-12680b21b/",
