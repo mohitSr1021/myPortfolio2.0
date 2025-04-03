@@ -170,7 +170,6 @@ export const Projects: Project[] = [
       "Node Js",
       "Express Js",
       "Redux-toolkit",
-      "gemini-1.5-flash",
       "JWT-Authentication",
     ],
     category: "Web Application",
