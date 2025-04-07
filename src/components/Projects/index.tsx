@@ -35,8 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects, from web apps to mobile
-          apps. Here are some of my projects.
+        I have developed a variety of web applications. Here are some of my projects.
         </Desc>
         <ToggleButtonGroup>
           {["all", "Web Application"].map((category) => (
