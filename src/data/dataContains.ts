@@ -122,7 +122,7 @@ export const Experiences: Experience[] = [
     highlights: [
      "NA"
     ],
-    // doc: "https://www.google.com",
+    doc: "NA",
   },
   {
     id: 1,
