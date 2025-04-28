@@ -109,7 +109,7 @@ export const Experiences: Experience[] = [
     id: 0,
     img: "",
     role: "Frontend Developer Intern",
-    company: "Zyper.ai Pvt Ltd.",
+    company: "HirreeTech Pvt Ltd.",
     date: "April 07, 2025 - Present",
     desc: "Building and enhancing responsive web applications to improve platform performance.",
     skills: ["JS", "React.js", "Redux", "HTML", "CSS"],
