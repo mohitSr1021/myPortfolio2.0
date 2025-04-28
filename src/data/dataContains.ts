@@ -105,8 +105,27 @@ interface Experience {
 }
 
 export const Experiences: Experience[] = [
-  {
+    {
     id: 0,
+    img: "",
+    role: "Frontend Developer Intern",
+    company: "Zyper.ai Pvt Ltd.",
+    date: "April 07, 2025 - Present",
+    desc: "Building and enhancing responsive web applications to improve platform performance.",
+    skills: ["JS", "React.js", "Redux", "HTML", "CSS"],
+    projects: [
+      {
+        name: "Web Application",
+        url: "NA",
+      },
+    ],
+    highlights: [
+     "NA"
+    ],
+    // doc: "https://www.google.com",
+  },
+  {
+    id: 1,
     img: "",
     role: "Software Development Intern",
     company: "Zyper.ai Pvt Ltd.",
