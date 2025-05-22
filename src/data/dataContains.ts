@@ -176,8 +176,7 @@ export const Projects: Project[] = [
     description: "Social Media Application",
     completed: true,
     image: chatrixImage,
-      webapp: "https://chatrix-io.vercel.app/auth/login",
-    ProjectLevel: "Advance with MERN Stack",
+    webapp: "https://chatrix-io.vercel.app/auth/login",
     tags: [
       "React Js",
       "MongoDb",
