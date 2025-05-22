@@ -13,7 +13,7 @@ import firebase from "../assets/firebase.png";
 import P1 from "../assets/P1.png";
 import P2 from "../assets/P2.png";
 import Insight2 from "../assets/Insight2.png";
-import chatrixImage from "../assets/image__40_-removebg-preview.png";
+import chatrixImage from "../assets/image__40_-removebg-preview (2).png";
 export const Bio = {
   name: "Mohit Singh Rawat",
   roles: ["a MERN Stack Developer"],
