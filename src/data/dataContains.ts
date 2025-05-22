@@ -13,7 +13,7 @@ import firebase from "../assets/firebase.png";
 import P1 from "../assets/P1.png";
 import P2 from "../assets/P2.png";
 import Insight2 from "../assets/Insight2.png";
-
+import chatrixImage from "../assets/image__40_-removebg-preview.png";
 export const Bio = {
   name: "Mohit Singh Rawat",
   roles: ["a MERN Stack Developer"],
@@ -175,8 +175,7 @@ export const Projects: Project[] = [
     category: "Web Application",
     description: "Social Media Application",
     completed: true,
-    image:
-      "https://drive.google.com/file/d/1v-EKNiEk3_tRPCN3HIq3lZ4RhW775X5a/view?usp=sharing",
+    image: chatrixImage,
       webapp: "https://chatrix-io.vercel.app/auth/login",
   },
   {
