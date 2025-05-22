@@ -177,6 +177,18 @@ export const Projects: Project[] = [
     completed: true,
     image: chatrixImage,
       webapp: "https://chatrix-io.vercel.app/auth/login",
+    ProjectLevel: "Advance with MERN Stack",
+    tags: [
+      "React Js",
+      "MongoDb",
+      "Node Js",
+      "Express Js",
+      "Redux-toolkit",
+      "JWT-Authentication",
+      "Cloudinary",
+      "Web Socket - (Basic)"
+    ],
+    category: "Web Application",
   },
   {
     id: 1,
