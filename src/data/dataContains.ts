@@ -173,10 +173,11 @@ export const Projects: Project[] = [
     date: "Dec 2024 - Present",
     ProjectLevel: "Advance with MERN Stack",
     category: "Web Application",
-    description: "Social Media Application - Coming Soon ",
-    completed: false,
+    description: "Social Media Application",
+    completed: true,
     image:
-      "https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg?semt=ais_hybrid",
+      "https://drive.google.com/file/d/1v-EKNiEk3_tRPCN3HIq3lZ4RhW775X5a/view?usp=sharing",
+      webapp: "https://chatrix-io.vercel.app/auth/login",
   },
   {
     id: 1,
