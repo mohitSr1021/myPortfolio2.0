@@ -187,7 +187,6 @@ export const Projects: Project[] = [
       "Cloudinary",
       "Web Socket - (Basic)"
     ],
-    category: "Web Application",
   },
   {
     id: 1,
